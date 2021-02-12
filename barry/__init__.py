@@ -1,5 +1,7 @@
 import numpy as np
 
+from . import mvpoly
+
 def fill(lam):
     """complete the coordinates
 
