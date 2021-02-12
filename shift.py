@@ -27,8 +27,8 @@ def poly(l, b):
     return s
 
 # 1D basis
-v0 = np.array([[0, 1]])
-v1 = np.array([[1, 3]])
+v0 = np.array([[1, 2]])
+v1 = np.array([[0, 3]])
 # v0 = np.array([[1, 3]])
 # v1 = np.array([[0, 1]])
 # v0 = np.array([[2, 0]])
@@ -56,9 +56,9 @@ for i, bc in enumerate(bc_set):
 # bary constraints
 lhs[3,1] =  v0[0,1]
 lhs[3,2] = -v0[0,0]
-lhs[4,4] = -v0[0,0]
-lhs[4,5] =  v0[0,1]
-lhs[5,4] = -v0[0,1]**2
+lhs[4,3] = -v0[0,0]
+lhs[4,4] =  v0[0,1]
+lhs[5,3] = -v0[0,1]**2
 lhs[5,5] =  v0[0,0]**2
 
 print(lhs)
