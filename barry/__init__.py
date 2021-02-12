@@ -16,6 +16,7 @@ def fill(lam):
         else:
             total += l
     lam[ind] = 1 - total
+    return lam
 
 def get_pos(basis, lam):
     return np.matmul(basis, lam)
